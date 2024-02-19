@@ -1,4 +1,4 @@
-var navLinks= document.getElementById("navLinks");
+let navLinks= document.getElementById("navLinks");
 
 function showmenu(){
     navLinks.style.right="0";

@@ -4,7 +4,6 @@
 *{
     margin: 0;
     padding: 0;
-    /* border: 1px solid yellow; */
 }
 
 @font-face {
@@ -32,22 +31,22 @@ body{
 
     /* Website Scrollerbar */
     body::-webkit-scrollbar {
-        width: 5px !important;
-        height: 5px !important;
+        width: 5px;
+        height: 5px;
     }
     body::-webkit-scrollbar-track {
-        background: #3838387c !important;
+        background: #3838387c;
     }
     body::-webkit-scrollbar-thumb {
-        background-color: #e0120ba4 !important;
-        border: 1px solid #ff020279 !important;
-        border-radius: 1px !important;
+        background-color: #e0120ba4;
+        border: 1px solid #ff020279;
+        border-radius: 1px;
     }
 
 .header{
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.6),rgba(4,9,30,0.6)),url(../image/background.jpg);
+    background-image: linear-gradient(rgba(3, 7, 22, 0.652),rgba(2, 6, 19, 0.735)),url(../image/background.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -58,6 +57,7 @@ nav{
     justify-content: space-between;
     align-items: center;
 }
+
 nav img{
     width: 150px;
 }
@@ -76,7 +76,7 @@ nav img{
 .nav-links a{
     color: #fff;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 30px;
     
 }
 .nav-links ul li::after{
@@ -95,21 +95,25 @@ nav img{
 }
 .text-box{
     width: 90%;
-    color: #fff;
+    color: white;
     position:absolute;
     top: 30%;
     left: 50%;
     transform: translate(-50%,50%);
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.342);
 }
+
 .text-box h1{
-    font-size: 62px;
+    font-size: 100px;
     font-weight: bold;
+    color: #ffe70a;
 
 }
+
 .text-box p{
     margin: 10px 0 40px;
-    font-size: 14px;
+    font-size: 25px;
     color: #fff;
     
 }
@@ -129,7 +133,13 @@ nav img{
     color: black;
     border: 2px solid yellow;
     background:yellow;
-    transition: 0.5s;
+    transition: 1s;
+}
+
+.logo{
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.7));
+    height: 50px;
+    width: auto;
 }
 
 .icon{
@@ -144,6 +154,7 @@ nav img{
     text-align: center;
     padding-top: 100px;
 }
+
 h1{
     font-size: 36px;
     font-weight: 300;
@@ -157,23 +168,28 @@ p{
 }
 .row{
     margin-top: 5%;
-    display: flex;
-    justify-content: space-between;
+    /* display: flex;
+    justify-content: space-between; */
 }
 .course-col{
-    flex-basis: 31%;
+    /* flex-basis: 31%; */
     background: #fff3f3;
     border-radius: 10px;
     margin-bottom:5%;
     padding: 20px 12px;
+    margin-left: 2%;
     box-sizing: border-box;
     transition: 0.5s;
+    align-content: center;
 }
+
 h3{
     text-align: center;
-    font-weight: 600;
+    font-weight: 900;
+    font-size: xx-large;
     margin: 10px 0px;
 }
+
 .course-col:hover{
     box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.4);
 }
@@ -187,6 +203,12 @@ h3{
     margin: auto;
     text-align: center;
     padding-top: 50px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .campus-col{
     flex-basis: 32%;
@@ -295,45 +317,68 @@ h3{
     padding: 100px 0;
     box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.664);
 }
-.ctn{
-    
-}
 
 /* Footer */
 
-.footer{
-    width: 100%;
+.college-footer {
+    background-color: black;
+    color: white;
     text-align: center;
-    padding: 30px 0;
-    margin-top: -50px;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    height: 130px;
 }
 
-.footer h4{
-    margin-bottom: 25px;
+.college-footer h2{
+    font-size: xx-large;
+}
+
+.college-footer h5{
+    font-size: small;
+}
+
+.copyright{
     margin-top: 20px;
-    font-weight: 600;
-} 
+    font-weight: 300;
+}
 
 /* Media query for responsive */
 
 @media (max-width: 700px) {
 
-    *{
-        overflow-x: hidden;
+    * {
         margin: 0;
         padding: 0;
-    
     }
-    #logo-img{
-        padding: 10px;
+
+    body{
+        overflow-x: hidden;
     }
+
+    .header-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        /* Ensure logo size is appropriate for smaller screens */
+        height: auto; /* Adjust based on layout needs */
+        max-width: 100%; /* Prevent overflow */
+    }
+
     .text-box h1{
-       font-size: 30px;
-       font-weight: bold;
+       font-size: 20px;
+       color: rgb(255, 221, 0);
     }
-    .text-box p{
-        font-size: 12px;
+
+    .text-box h3{
+        font-size: 15px;
+        align-items: center;
+        margin-top: 35px;
     }
+
     .nav-links ul li{
         display: block;
     }
@@ -348,22 +393,42 @@ h3{
         z-index: 2;
         transition: 1s;
     }
-    .icon{
+
+    .icon-1{
         display: block;
         color: #fff;
         margin: 10px;
         font-size: 25px;
         cursor: pointer;
     }
+
+    .icon-2{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 25px;
+        cursor: pointer;
+        position: relative;
+        top: -35px
+    }
+
+
     .nav-links ul{
         padding: 30px;
     }
 
     /*Course in Media query*/
    
-    .course-col{
+    .course-col h1{
         margin: 10px 10px;
+        font-size: larger;
     }
+
+    .course-col h1{
+        color: black;
+    }
+
+
     .row{
         flex-direction: column;  
     }   
@@ -375,10 +440,39 @@ h3{
         box-shadow:none;
     }
 
+    .facilities-col h3{
+       font-size: larger;
+       font-weight: 800;
+       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .last-col{
+    margin-bottom: 30px;;
+    }
     /* Call To Action in Media query*/
     .ctn h1{
         font-size: 24px;
     }
 }
 
-/* Media query is Close*/
+.college-footer{
+height: 110px;
+}
+
+.college-footer h2 {
+    font-size: large;
+    font-weight: 900;
+}
+
+.college-footer h5{
+    font-size: x-small;
+    font-weight: 800;
+}
+
+.college-footer h6 {
+    font-size: xx-small;
+    margin-top: 25px;
+    font-weight: 600;
+}
+
+
